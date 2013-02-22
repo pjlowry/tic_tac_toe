@@ -3,25 +3,27 @@
 # bottom_line = [" ", "|", " ", "|", " "]
 
 class Board
+  attr_reader :position
 
   def initialize 
-    @positions_with_values = {"1" => " ", "2" => " ", "3" => " ",
-                              "4" => " ", "5" => " ", "6" => " ",
-                              "7" => " ", "8" => " ", "9" => " "}
+    @positions = {"1" => "1", "2" => "2", "3" => "3",
+                  "4" => "4", "5" => "5", "6" => "6",
+                  "7" => "7", "8" => "8", "9" => "9"}
   end
 
   def display_positions 
     puts ""
-    puts " 1 | 2 | 3 "
+    puts " #{@positions['1']} | #{@positions['2']} | #{@positions['3']} "
     puts "-----------"
-    puts " 4 | 5 | 6 "
+    puts " #{@positions['4']} | #{@positions['5']} | #{@positions['6']} "
     puts "-----------"
-    puts " 7 | 8 | 9 "
+    puts " #{@positions['7']} | #{@positions['8']} | #{@positions['9']} "
     puts ""
   end 
 
-  def mark(position, letter)
-    @positions[position] = letter
+  def turn(position, letter)
+   #@positions.value({position => letter})
+   @positions["#{position}"] = letter
   end
 
 end

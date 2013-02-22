@@ -5,6 +5,6 @@ class Player
 end
 
   def to_s
-    "#{@player} is an instance of player."
+    "#{@player.to_s} is an instance of player."
   end
 end
